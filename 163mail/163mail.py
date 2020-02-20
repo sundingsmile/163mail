@@ -5,7 +5,7 @@ from email.header import Header
 class Mail(object):
     def __init__(self,msg_to_list=['sundingsmile@163.com'],mail_dic={'Name': ['sunding'], 'Subject': ['1'], 'Email': ['sdfadf@qq.com'], 'Phone': ['17736041156'], 'Message': ['test']}):
         self.msg_from = 'sundingsmile@163.com'  # 发送方邮箱
-        self.passwd = 'gq2007431066'  # 填入发送方邮箱的授权码(填入自己的授权码，相当于邮箱密码)
+        self.passwd = '********'  # 填入发送方邮箱的授权码(填入自己的授权码，相当于邮箱密码)
         self.msg_to_list = msg_to_list
         self.content = "\r\n".join([x + ':'+mail_dic[x][0] for x in mail_dic.keys()])
         self.msg = MIMEText(self.content)
